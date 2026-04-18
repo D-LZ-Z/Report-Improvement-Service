@@ -1,95 +1,30 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f8fafc;
-  color: #1e293b;
-}
-
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-/* BUTTON */
-.btn {
-  background: white;
-  color: black;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-/* SECTION */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* GRID */
-.grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.slider {
+  overflow: hidden;
+  width: 100%;
   margin-top: 30px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 250px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-/* FEEDBACK SLIDER */
-.feedback-section {
-  background: #eef2ff;
-}
-
-.slider {
-  overflow: hidden;
-  width: 90%;
-  margin: auto;
-}
-
-.slides {
+.slide-track {
   display: flex;
   gap: 20px;
-  transition: transform 0.5s ease;
+  width: calc(250px * 14);
+  animation: scroll 20s linear infinite;
 }
 
-.slides img {
+/* 🔥 统一图片尺寸（重点） */
+.slide-track img {
   width: 250px;
+  height: 450px;
+  object-fit: cover; /* 自动裁剪 */
   border-radius: 12px;
 }
 
-/* CTA */
-.cta {
-  background: #0f172a;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.cta h2 {
-  margin-bottom: 20px;
+/* 🔥 连续滑动动画 */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
