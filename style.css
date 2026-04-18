@@ -1,65 +1,95 @@
 body {
-  font-family: Arial;
-  text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
   background: #f8fafc;
+  color: #1e293b;
 }
 
+/* HERO */
 .hero {
-  padding: 100px;
-  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
+  text-align: center;
+  padding: 100px 20px;
 }
 
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
 .btn {
   background: white;
+  color: black;
   padding: 12px 20px;
   text-decoration: none;
-  color: black;
-  font-weight: bold;
   border-radius: 10px;
+  font-weight: bold;
 }
 
+/* SECTION */
 .section {
-  padding: 60px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* GRID */
 .grid {
   display: flex;
   gap: 20px;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .card {
   background: white;
   padding: 20px;
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.pricing {
+/* FEEDBACK SLIDER */
+.feedback-section {
   background: #eef2ff;
-  padding: 60px;
 }
 
-.coming {
-  margin-top: 50px;
-  position: relative;
-}
-
-.box {
-  border: 2px solid #ccc;
-  padding: 40px;
-  width: 300px;
+.slider {
+  overflow: hidden;
+  width: 90%;
   margin: auto;
-  border-radius: 10px;
 }
 
-.ribbon {
-  position: absolute;
-  left: 40%;
-  top: -10px;
-  background: red;
+.slides {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  width: 250px;
+  border-radius: 12px;
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
   color: white;
-  padding: 5px 10px;
-  transform: rotate(-10deg);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
 }
